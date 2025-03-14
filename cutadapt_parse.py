@@ -1,7 +1,7 @@
-# This is my first Python script
+# Extract statistics from the cutadapt text output and store in a csv
 import re
 import pandas as pd
-myfile = open("C:/Users/fhartley/Documents/Francesco/myfile.txt", 'rt')
+myfile = open("C:/Users/fhartley/Documents/myfile.txt", 'rt')
 dmf = myfile.read()
 dmf = dmf.rstrip("\n")
 print(dmf)
