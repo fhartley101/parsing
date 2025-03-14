@@ -1,6 +1,8 @@
+# Extract alignment statistics from Bowtie output and store in a csv
+
 import pandas as pd
 
-with open("C:/Users/fhartley/Documents/Project/CRISPR miRNA/6 - Analysis/cluster/bowtie/dmf811.o73915120", 'rt') as bowtie: # Open for reading text
+with open("C:/Users/fhartley/Documents/Project/bowtie/dmf811.o73915120", 'rt') as bowtie: # Open for reading text
     stats = pd.DataFrame()
     ab = []
     c = []
@@ -21,4 +23,4 @@ with open("C:/Users/fhartley/Documents/Project/CRISPR miRNA/6 - Analysis/cluster
     stats.columns = ['Reads processed', 'Reads that align', 'Reads that fail to align', 'Reads suppressed by -m 3']
     stats.index = ["WTCHG_7025", "WTCHG_7026", "WTCHG_7027", "WTCHG_7028", "WTCHG_7029", "WTCHG_7030", "WTCHG_7031", "WTCHG_7032", "WTCHG_7033", "WTCHG_7034", "WTCHG_7035", "WTCHG_7036", "WTCHG_7037", "WTCHG_7038", "WTCHG_7039"]
     print(stats)
-    stats.to_csv("C:/Users/fhartley/Documents/Project/CRISPR miRNA/6 - Analysis/cluster/bowtie/bowtie_stats.csv")
+    stats.to_csv("C:/Users/fhartley/Documents/Project/bowtie/bowtie_stats.csv")
